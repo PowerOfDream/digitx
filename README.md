@@ -145,7 +145,7 @@ Accuracy = 0.99988
 十万个样本没GPU得耐心等一会儿，99.988%的正确率貌似不错，看看预测失败的12个样本长啥样：
 
 
-![Alt](./doc/errors.png "errors")
+![Alt](./doc/errors.PNG "errors")
 
 
 “0-6-9452.png”表示第9452个样本本来是‘0’，但被模型错误识别为‘6’了。从上图中可以看出识别错误的基本上都是对比度小且噪声大的样本，但第2个样本‘0’被识别成‘9’还是有些出乎意料！显然还是没人眼厉害。可能的原因是生成样本时字体类型是均匀随机采样的，而只有一种字体的‘0’中间有一条线，导致它的样本数量比例不够，因而模型对它的学习次数要少于其它字符。
@@ -159,13 +159,13 @@ Accuracy = 0.99988
 
 拿手机在昏暗的地方对着身份证拍了一张照，扣出几个数字，然后用C++写了个demo调用frugally-deep，结果出来前还有些小激动：
 
-![Alt](./doc/test_1.png "test1")
+![Alt](./doc/test_1.PNG "test1")
 
-![Alt](./doc/test_7.png "test7")
+![Alt](./doc/test_7.PNG "test7")
 
-![Alt](./doc/test_4.png "test4")
+![Alt](./doc/test_4.PNG "test4")
 
-![Alt](./doc/test_3.png "test3")
+![Alt](./doc/test_3.PNG "test3")
 
 嘿，预测精度居然到5个9以上了，还算是对得起这么大个模型:-)
 
@@ -292,7 +292,7 @@ Accuracy = 0.9985
 ```
 果然loss加大了十倍，错误率也会加大十倍，1万个样本中预测失败的15个长这样：
 
-![Alt](./doc/errors2.png "errors2")
+![Alt](./doc/errors2.PNG "errors2")
 
 相比上个模型，不甚理想:(
 
