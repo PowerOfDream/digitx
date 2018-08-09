@@ -218,7 +218,7 @@ def gen_batch_examples(batch_size, img_size, font_dir, output_path = None):
         Y[i, 0] = y
 
         if (output_path != None):
-            char_img.save(output_path + str(i) + ".png") 
+            char_img.save(output_path + "/" + str(i) + ".png") 
 
     return X, Y
 
